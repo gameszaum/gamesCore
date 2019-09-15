@@ -6,7 +6,7 @@ A minecraft plugin core for personal and public projects, to use this library in
 
 If you found any bug/error, please contact-me in my discord server, http://discord.gameszaum.com
 
-## Author
+## Contributors
 
 gameszaum.
 
