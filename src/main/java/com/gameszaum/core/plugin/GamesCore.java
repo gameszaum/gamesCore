@@ -29,6 +29,8 @@ public final class GamesCore extends GamesPlugin {
 
     @Override
     public void enable() {
+        /* Commands. */
+
         TestCommands.setup();
 
         /* TimeSecondEvent call */

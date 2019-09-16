@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="897209db-b5ec-48b0-8c97-51d73a3109dd" name="Default" comment="created Scoreboard API.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/builder/CommandBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/builder/CommandBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/helper/CommandHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/helper/CommandHelperImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/loader/CommandRegister.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/registry/TestCommands.java" afterDir="false" />
+    <list default="true" id="897209db-b5ec-48b0-8c97-51d73a3109dd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/builder/CommandBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/builder/CommandBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/builder/CommandBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/builder/CommandBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/plugin/GamesCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/plugin/GamesCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/plugin/GamesPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/plugin/GamesPlugin.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,8 +21,8 @@
       <file leaf-file-name="GamesCore.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gameszaum/core/plugin/GamesCore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            <state relative-caret-position="492">
+              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
               <folding>
                 <element signature="e#1155#1156#0" expanded="true" />
                 <element signature="e#1186#1187#0" expanded="true" />
@@ -40,12 +34,11 @@
       <file leaf-file-name="TestCommands.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/registry/TestCommands.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="15" column="68" lean-forward="true" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
+            <state relative-caret-position="218">
+              <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#327#531#0" expanded="true" />
-                <element signature="e#530#531#0" expanded="true" />
+                <element signature="e#834#835#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,16 +102,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/scoreboard/Board.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/plugin/GamesPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/builder/CommandBuilderImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/Command.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/loader/CommandRegister.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/plugin/GamesCore.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/registry/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/builder/CommandHelper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/builder/CommandBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/CommandBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/builder/CommandBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/helper/CommandHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/helper/CommandHelperImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/Command.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/builder/CommandBase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/builder/CommandBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/plugin/GamesCore.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/registry/TestCommands.java" />
       </list>
     </option>
@@ -206,6 +199,16 @@
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="command" type="462c0819:PsiDirectoryNode" />
               <item name="builder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gamesCore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gamesCore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+              <item name="registry" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gamesCore" type="b2602c69:ProjectViewProjectNode" />
@@ -347,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568654042753</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="updated Command API.">
+      <created>1568657341545</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1568657341545</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -416,7 +426,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created Scoreboard API." />
     <MESSAGE value="created EventBuilder and implemented TimeSecondEvent." />
-    <option name="LAST_COMMIT_MESSAGE" value="created EventBuilder and implemented TimeSecondEvent." />
+    <MESSAGE value="updated Command API." />
+    <option name="LAST_COMMIT_MESSAGE" value="updated Command API." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -748,45 +759,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameszaum/core/plugin/GamesCore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding>
-            <element signature="e#1155#1156#0" expanded="true" />
-            <element signature="e#1186#1187#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gameszaum/core/plugin/GamesPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/builder/CommandBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/builder/CommandBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -812,14 +788,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/registry/TestCommands.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/Command.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="15" column="68" lean-forward="true" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
+        <state relative-caret-position="182">
+          <caret line="7" column="47" lean-forward="true" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#327#531#0" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameszaum/core/plugin/GamesCore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+          <folding>
+            <element signature="e#1155#1156#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/builder/CommandBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/builder/CommandBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameszaum/core/command/registry/TestCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#834#835#0" expanded="true" />
           </folding>
         </state>
       </provider>
