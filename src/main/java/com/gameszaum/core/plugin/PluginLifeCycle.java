@@ -1,5 +1,8 @@
 package com.gameszaum.core.plugin;
 
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.event.Listener;
+
 public interface PluginLifeCycle {
 
     void load();
@@ -7,5 +10,9 @@ public interface PluginLifeCycle {
     void enable();
 
     void disable();
+
+    void registerListeners(Listener... listeners);
+
+    <T extends CommandExecutor> void registerCommand(T command, String... aliases);
 
 }
