@@ -8,7 +8,7 @@ If you found any bug/error, please contact-me in my discord server, http://disco
 
 ## Colaborators
 
-gameszaum.
+gameszaum, Diogo Murano.
 
 ## Donate
 
