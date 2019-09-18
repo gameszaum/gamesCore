@@ -4,6 +4,7 @@ import com.gameszaum.core.Services;
 import com.gameszaum.core.command.loader.CommandRegister;
 import com.gameszaum.core.command.registry.TestCommands;
 import com.gameszaum.core.event.registry.TimeSecondEvent;
+import com.gameszaum.core.menu.Menu;
 import com.gameszaum.core.scoreboard.service.ScoreboardService;
 import com.gameszaum.core.scoreboard.service.ScoreboardServiceImpl;
 import org.bukkit.Bukkit;
@@ -32,6 +33,10 @@ public final class GamesCore extends GamesPlugin {
         /* Commands. */
 
         TestCommands.setup();
+
+        /* Listeners */
+
+        registerListeners(new Menu());
 
         /* TimeSecondEvent call */
 
