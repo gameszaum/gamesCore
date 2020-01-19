@@ -10,6 +10,14 @@ If you found any bug/error, please contact-me in my discord server, http://disco
 
 gameszaum, Diogo Murano.
 
+## Contribution
+
+Do you have something to add in the library? Make a pull request with the code and will be analyzed by the games-core team.
+
+Make sure the code make sense, follow the "games-core pattern" and do not have any bug/error.
+
+Thank you for the contribution and reading.
+
 ## Donate
 
 Do you want to help the library maintance? Contact-me in my discord server, http://discord.gameszaum.com or click here.  
