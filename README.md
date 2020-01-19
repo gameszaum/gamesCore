@@ -1,6 +1,6 @@
 # gamesCore
 
-A minecraft plugin core for personal and public projects, to use this library in your project, please leave the credits.
+A minecraft plugin core for personal and public projects, to use this library in your project, please keep the credits.
 
 ## Bugs
 
@@ -16,7 +16,7 @@ Do you have something to add in the library? Make a pull request with the code a
 
 Make sure the code make sense, follow the "games-core pattern" and do not have any bug/error.
 
-Thank you for the contribution and reading.
+Thank you for helping and reading, see you soon.
 
 ## Donate
 
