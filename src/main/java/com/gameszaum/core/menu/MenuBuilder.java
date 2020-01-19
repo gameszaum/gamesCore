@@ -1,10 +1,11 @@
 package com.gameszaum.core.menu;
 
-import com.gameszaum.core.menu.event.MenuHandler;
-import com.gameszaum.core.menu.helper.MenuHelper;
+import com.gameszaum.core.menu.helper.Menu;
 
 public interface MenuBuilder {
 
-    void build(MenuHelper menuHelper, MenuHandler menuHandler);
+    static Menu buildMenu(Menu menu){
+        return menu;
+    }
 
 }

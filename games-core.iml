@@ -24,7 +24,7 @@
     <orderEntry type="module-library">
       <library name="Maven: org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT">
         <CLASSES>
-          <root url="jar://C:/APIs/spigot.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../spigot-1.8.8-R0.1-SNAPSHOT-latest.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

@@ -3,6 +3,8 @@ package com.gameszaum.core.command.registry;
 import com.gameszaum.core.command.Command;
 import com.gameszaum.core.command.builder.CommandBase;
 import com.gameszaum.core.command.helper.CommandHelper;
+import com.gameszaum.core.menu.MenuBuilder;
+import com.gameszaum.core.menu.helper.Menu;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -21,6 +23,13 @@ public class TestCommands {
                 }
             }
         }).runAsync().setCommand("test");
+
+        Command.create(new CommandBase() {
+            @Override
+            public void handler(CommandSender commandSender, CommandHelper helper, String... args) throws Exception {
+                MenuBuilder.buildMenu(new Menu("Teste", 3)).showMenu(helper.getPlayer(commandSender));
+            }
+        }).onlyPlayer().setCommand("menu");
     }
 
 }

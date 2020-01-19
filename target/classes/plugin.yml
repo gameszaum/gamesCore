@@ -1,0 +1,7 @@
+name: games-core
+version: 1.0-SNAPSHOT
+main: com.gameszaum.core.plugin.GamesCore
+prefix: gamesCore
+authors: [gameszaum]
+description: A minecraft plugin core for personal and public projects.
+website: gameszaum.com
