@@ -11,4 +11,6 @@ public interface CommandHelper {
 
     Player getPlayer(CommandSender sender);
 
+    String getMsg(String msg);
+
 }

@@ -1,5 +1,6 @@
 package com.gameszaum.core.command.helper;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -23,5 +24,10 @@ public class CommandHelperImpl implements CommandHelper {
     @Override
     public Player getPlayer(CommandSender sender) {
         return (Player) sender;
+    }
+
+    @Override
+    public String getMsg(String msg) {
+        return ChatColor.translateAlternateColorCodes('&', msg);
     }
 }

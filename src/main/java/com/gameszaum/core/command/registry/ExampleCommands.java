@@ -8,7 +8,7 @@ import com.gameszaum.core.menu.helper.Menu;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class TestCommands {
+public class ExampleCommands {
 
     public static void setup() {
         Command.create(new CommandBase() {
