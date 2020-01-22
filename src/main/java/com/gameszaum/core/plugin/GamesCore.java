@@ -1,13 +1,11 @@
 package com.gameszaum.core.plugin;
 
 import com.gameszaum.core.Services;
-import com.gameszaum.core.command.loader.CommandRegister;
-import com.gameszaum.core.command.registry.TestCommands;
+import com.gameszaum.core.command.registry.ExampleCommands;
 import com.gameszaum.core.event.registry.TimeSecondEvent;
-import com.gameszaum.core.scoreboard.service.ScoreboardService;
-import com.gameszaum.core.scoreboard.service.ScoreboardServiceImpl;
+import com.gameszaum.core.scoreboard.data.ScoreData;
+import com.gameszaum.core.scoreboard.data.ScoreDataImpl;
 import org.bukkit.Bukkit;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.scheduler.BukkitRunnable;
 
 /*
@@ -24,14 +22,14 @@ public final class GamesCore extends GamesPlugin {
         instance = this;
 
         Services.create(this);
-        Services.add(ScoreboardService.class, new ScoreboardServiceImpl());
+        Services.add(ScoreData.class, new ScoreDataImpl());
     }
 
     @Override
     public void enable() {
         /* Commands. */
 
-        TestCommands.setup();
+        ExampleCommands.setup();
 
         /* Listeners */
 
@@ -52,10 +50,5 @@ public final class GamesCore extends GamesPlugin {
 
     public static GamesPlugin getInstance() {
         return instance;
-    }
-
-    @Override
-    public <T extends CommandExecutor> void registerCommand(T command, String... aliases) {
-        CommandRegister.registerCommand(this, command, aliases);
     }
 }
