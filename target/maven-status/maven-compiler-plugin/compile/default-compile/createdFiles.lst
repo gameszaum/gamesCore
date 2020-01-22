@@ -1,4 +1,5 @@
 com\gameszaum\core\exception\model\ModelAlreadyExist.class
+com\gameszaum\core\database\mysql\MySQLService.class
 com\gameszaum\core\services\Model.class
 com\gameszaum\core\command\registry\ExampleCommands$1.class
 com\gameszaum\core\command\helper\CommandHelperImpl.class
@@ -6,6 +7,7 @@ com\gameszaum\core\event\registry\TimeSecondEvent.class
 com\gameszaum\core\exception\model\ModelDoesntExist.class
 com\gameszaum\core\menu\action\ItemAction.class
 com\gameszaum\core\plugin\GamesCore.class
+com\gameszaum\core\database\mysql\MySQLServiceImpl.class
 com\gameszaum\core\menu\helper\Menu$1.class
 com\gameszaum\core\menu\helper\MenuHelper.class
 com\gameszaum\core\event\EventBuilder.class
@@ -13,6 +15,7 @@ com\gameszaum\core\scoreboard\data\ScoreData.class
 com\gameszaum\core\scoreboard\data\ScoreDataImpl.class
 com\gameszaum\core\menu\helper\Menu.class
 com\gameszaum\core\plugin\GamesPlugin.class
+com\gameszaum\core\api\classes\ListenerLoader.class
 com\gameszaum\core\exception\model\ModelCreateFailure.class
 com\gameszaum\core\command\builder\CommandBase.class
 com\gameszaum\core\menu\MenuBuilder.class
@@ -24,6 +27,8 @@ com\gameszaum\core\command\loader\CommandRegister.class
 com\gameszaum\core\command\registry\ExampleCommands$2.class
 com\gameszaum\core\plugin\PluginLifeCycle.class
 com\gameszaum\core\command\registry\ExampleCommands.class
+com\gameszaum\core\api\classes\ClassGetter.class
+com\gameszaum\core\database\DatabaseCredentials.class
 com\gameszaum\core\scoreboard\helper\ScoreHelper.class
 com\gameszaum\core\command\builder\CommandBase$1.class
 com\gameszaum\core\command\helper\CommandHelper.class
