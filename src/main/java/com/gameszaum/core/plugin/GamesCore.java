@@ -33,7 +33,6 @@ public final class GamesCore extends GamesPlugin {
 
         /* Listeners */
 
-
         /* TimeSecondEvent call */
 
         new BukkitRunnable() {

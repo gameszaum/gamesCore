@@ -1,5 +1,6 @@
 package com.gameszaum.core.api.classes;
 
+import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;
 
@@ -11,12 +12,12 @@ public class ListenerLoader {
         this.plugin = plugin;
     }
 
-    public void load(String packageName) {
-        ClassGetter.getClassesForPackage(plugin, packageName).stream().filter(Listener.class::isAssignableFrom).forEach(aClass -> {
+    public void load(String pkg) {
+        ClassGetter.getClassesForPackage(plugin, pkg).stream().filter(aClass -> Listener.class.isAssignableFrom(aClass) && aClass != Listener.class).forEach(aClass -> {
             try {
                 Listener listener = (Listener) aClass.newInstance();
 
-                plugin.getServer().getPluginManager().registerEvents(listener, plugin);
+                Bukkit.getPluginManager().registerEvents(listener, plugin);
                 System.out.println("[GamesCore] Listener '" + aClass.getSimpleName() + "' registered sucessfully.");
             } catch (Exception e) {
                 e.printStackTrace();

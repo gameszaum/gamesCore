@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="897209db-b5ec-48b0-8c97-51d73a3109dd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/menu/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/menu/MenuBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/menu/event/MenuHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/menu/helper/MenuHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/menu/helper/MenuHelperImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/menu/registry/TestMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/api/classes/ListenerLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/api/classes/ListenerLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/plugin/GamesCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/plugin/GamesCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/scoreboard/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/scoreboard/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/scoreboard/listener/ScoreboardListeners.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/scoreboard/listener/ScoreboardListeners.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameszaum/core/api/classes/ListenerLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gameszaum/core/api/classes/ListenerLoader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/games-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/games-core-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +46,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
@@ -187,22 +184,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1579458572231" />
-    <state width="1493" height="189" key="GridCell.Tab.0.bottom" timestamp="1579719958417">
+    <state width="1493" height="189" key="GridCell.Tab.0.bottom" timestamp="1579748747605">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="189" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579719958417" />
-    <state width="1493" height="189" key="GridCell.Tab.0.center" timestamp="1579719958417">
+    <state width="1493" height="189" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579748747605" />
+    <state width="1493" height="189" key="GridCell.Tab.0.center" timestamp="1579748747605">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="189" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1579719958417" />
-    <state width="1493" height="189" key="GridCell.Tab.0.left" timestamp="1579719958416">
+    <state width="1493" height="189" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1579748747605" />
+    <state width="1493" height="189" key="GridCell.Tab.0.left" timestamp="1579748747605">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="189" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1579719958416" />
-    <state width="1493" height="189" key="GridCell.Tab.0.right" timestamp="1579719958417">
+    <state width="1493" height="189" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1579748747605" />
+    <state width="1493" height="189" key="GridCell.Tab.0.right" timestamp="1579748747605">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="189" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579719958417" />
+    <state width="1493" height="189" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579748747605" />
     <state x="277" y="56" key="SettingsEditor" timestamp="1579458576134">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -211,10 +208,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1579710870104" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1579712627892">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1582998557509">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1579712627892" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1582998557509" />
   </component>
   <component name="masterDetails">
     <states>
