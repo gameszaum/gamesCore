@@ -57,7 +57,14 @@
       <artifactId>spigot-api</artifactId>
       <version>1.8.8-R0.1-SNAPSHOT</version>
       <scope>system</scope>
-      <systemPath>C:/Users/user/Documents/Projects/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar</systemPath>
+      <systemPath>${project.basedir}/src/main/resources/dependencies/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>bungeecord</groupId>
+      <artifactId>net.md_5</artifactId>
+      <version>1110</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/src/main/resources/dependencies/BungeeCord.jar</systemPath>
     </dependency>
   </dependencies>
   <properties>

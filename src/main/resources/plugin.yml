@@ -1,6 +1,6 @@
 name: games-core
 version: ${project.version}
-main: com.gameszaum.core.plugin.GamesCore
+main: com.gameszaum.core.spigot.plugin.GamesCore
 prefix: gamesCore
 authors: [gameszaum]
 description: A minecraft plugin core for personal and public projects.

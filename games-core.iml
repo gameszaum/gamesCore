@@ -5,6 +5,7 @@
       <configuration>
         <autoDetectTypes>
           <platformType>SPIGOT</platformType>
+          <platformType>BUNGEECORD</platformType>
         </autoDetectTypes>
       </configuration>
     </facet>
@@ -24,7 +25,16 @@
     <orderEntry type="module-library">
       <library name="Maven: org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../spigot-1.8.8-R0.1-SNAPSHOT-latest.jar!/" />
+          <root url="jar://$MODULE_DIR$/src/main/resources/dependencies/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: bungeecord:net.md_5:1110">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/src/main/resources/dependencies/BungeeCord.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

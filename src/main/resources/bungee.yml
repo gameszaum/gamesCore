@@ -1,0 +1,7 @@
+name: games-core
+version: ${project.version}
+main: com.gameszaum.core.bungee.Bungee
+prefix: gamesCore
+description: A minecraft plugin core for personal and public projects.
+author: [gameszaum]
+website: gameszaum.com
