@@ -3,8 +3,7 @@ package com.gameszaum.core.spigot.command.registry;
 import com.gameszaum.core.spigot.command.Command;
 import com.gameszaum.core.spigot.command.builder.CommandBase;
 import com.gameszaum.core.spigot.command.helper.CommandHelper;
-import com.gameszaum.core.spigot.menu.MenuBuilder;
-import com.gameszaum.core.spigot.menu.helper.Menu;
+import com.gameszaum.core.spigot.menu.Menu;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -27,7 +26,7 @@ public class ExampleCommands {
         Command.create(new CommandBase() {
             @Override
             public void handler(CommandSender commandSender, CommandHelper helper, String... args) throws Exception {
-                MenuBuilder.buildMenu(new Menu("Teste", 3)).showMenu(helper.getPlayer(commandSender));
+                new Menu("Teste", 3).showMenu(helper.getPlayer(commandSender));
             }
         }).onlyPlayer().setCommand("menu");
     }
