@@ -1,21 +1,19 @@
 package com.gameszaum.core.bungee;
 
-import net.md_5.bungee.api.plugin.Plugin;
+import com.gameszaum.core.bungee.plugin.GamesBungee;
 
-public class Bungee extends Plugin {
+public class Bungee extends GamesBungee {
 
     @Override
-    public void onLoad() {
-        //
+    public void load() {
     }
 
     @Override
-    public void onEnable() {
-        //
+    public void enable() {
     }
 
     @Override
-    public void onDisable() {
-        //
+    public void disable() {
+
     }
 }

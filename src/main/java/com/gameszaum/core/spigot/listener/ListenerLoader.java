@@ -1,5 +1,6 @@
-package com.gameszaum.core.other.classes;
+package com.gameszaum.core.spigot.listener;
 
+import com.gameszaum.core.other.classes.ClassGetter;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.Plugin;

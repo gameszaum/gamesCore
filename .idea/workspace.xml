@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="897209db-b5ec-48b0-8c97-51d73a3109dd" name="Default" comment="change the project structure and created PermissionService">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/configuration/ConfigAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/item/ItemBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/loader/ClassGetter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/location/Cuboid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/server/PingServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/title/ActionBarAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/title/Title.java" afterDir="false" />
+    <list default="true" id="897209db-b5ec-48b0-8c97-51d73a3109dd" name="Default" comment="added some API's, changed MySQLServiceImpl and build games-core.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/plugin/BungeeLifeCycle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/plugin/GamesBungee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/mysql/MySQLServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/mysql/MySQLServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/registry/ExampleCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/registry/ExampleCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/menu/MenuBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/menu/helper/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/games-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/games-core-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-games-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-games-core-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/Bungee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/Bungee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/classes/ListenerLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/listener/ListenerLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +16,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -180,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586884047759</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added some API's, changed MySQLServiceImpl and build games-core.">
+      <created>1586891167791</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586891167791</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -189,7 +184,8 @@
     <MESSAGE value="updated Command API." />
     <MESSAGE value="add some codes to Command API." />
     <MESSAGE value="change the project structure and created PermissionService" />
-    <option name="LAST_COMMIT_MESSAGE" value="change the project structure and created PermissionService" />
+    <MESSAGE value="added some API's, changed MySQLServiceImpl and build games-core." />
+    <option name="LAST_COMMIT_MESSAGE" value="added some API's, changed MySQLServiceImpl and build games-core." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -197,10 +193,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="72" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1579459688122" />
-    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser" timestamp="1586877568115">
+    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser" timestamp="1586979602193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586877568115" />
+    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586979602193" />
     <state x="611" y="302" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584932240250">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -213,38 +209,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586881051868" />
-    <state x="106" y="0" key="CommitChangelistDialog2" timestamp="1586884041147">
+    <state x="106" y="0" key="CommitChangelistDialog2" timestamp="1586891161520">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="106" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586884041147" />
+    <state x="106" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586891161520" />
     <state x="548" y="168" key="FileChooserDialogImpl" timestamp="1579458572231">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1579458572231" />
-    <state width="1493" height="189" key="GridCell.Tab.0.bottom" timestamp="1586891090786">
+    <state width="1493" height="189" key="GridCell.Tab.0.bottom" timestamp="1586894170790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="189" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586891090786" />
-    <state width="1493" height="189" key="GridCell.Tab.0.center" timestamp="1586891090785">
+    <state width="1493" height="189" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586894170790" />
+    <state width="1493" height="189" key="GridCell.Tab.0.center" timestamp="1586894170789">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="189" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586891090785" />
-    <state width="1493" height="189" key="GridCell.Tab.0.left" timestamp="1586891090785">
+    <state width="1493" height="189" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586894170789" />
+    <state width="1493" height="189" key="GridCell.Tab.0.left" timestamp="1586894170789">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="189" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586891090785" />
-    <state width="1493" height="189" key="GridCell.Tab.0.right" timestamp="1586891090785">
+    <state width="1493" height="189" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586894170789" />
+    <state width="1493" height="189" key="GridCell.Tab.0.right" timestamp="1586894170790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="189" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586891090785" />
+    <state width="1493" height="189" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586894170790" />
     <state x="277" y="56" key="SettingsEditor" timestamp="1579458576134">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1579458576134" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1586884496422">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1586891171727">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586884496422" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586891171727" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1586998121393">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586998121393" />
     <state x="209" y="78" key="new project wizard" timestamp="1586884968107">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
