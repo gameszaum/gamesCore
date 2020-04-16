@@ -4,11 +4,11 @@ A minecraft plugin core for personal and public projects, to use this library in
 
 ## Bugs
 
-If you found any bug/error, please contact-me in my discord server, http://discord.gameszaum.com
+If you found any bug/error, please contact-me in my [discord server](http://discord.gameszaum.com).
 
 ## Colaborators
 
-gameszaum, Diogo Murano.
+[gameszaum](github.com/gameszaum), [Diogo Murano](github.com/DiogoMurano).
 
 ## Contribution
 
@@ -18,8 +18,12 @@ Make sure the code make sense, follow the "games-core pattern" and do not have a
 
 Thank you for helping and reading, see you soon.
 
+## Explanation
+
+Read [USE](https://github.com/gameszaum/gamesCore/blob/master/USE.md) file to know how to use this library, it isn't hard. :)
+
 ## Donate
 
-Do you want to help the library maintance? Contact-me in my discord server, http://discord.gameszaum.com or click here.  
+Do you want to help the library maintance? Contact-me in my discord server, http://discord.gameszaum.com or click bellow.  
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DZGUGVQ9A4NHN) 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DZGUGVQ9A4NHN)
