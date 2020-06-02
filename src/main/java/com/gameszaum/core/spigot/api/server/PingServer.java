@@ -32,7 +32,6 @@ public class PingServer {
         return Integer.parseInt(data[2]);
     }
 
-
     public void update() {
         try {
             socket.close();

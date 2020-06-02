@@ -18,9 +18,9 @@ public final class GamesCore extends GamesPlugin {
 
     @Override
     public void load() {
-        /* Services */
-
         instance = this;
+
+        /* Services */
 
         Services.create(this);
         Services.add(ScoreData.class, new ScoreDataImpl());
@@ -37,7 +37,9 @@ public final class GamesCore extends GamesPlugin {
 
         /* TimeSecondEvent call */
 
-        Bukkit.getScheduler().scheduleAsyncRepeatingTask(this, () -> Bukkit.getOnlinePlayers().forEach(o -> new TimeSecondEvent(o).call()), 20L, 0L);
+        Bukkit.getScheduler().scheduleAsyncRepeatingTask(this, () -> Bukkit.getOnlinePlayers().forEach(o -> new TimeSecondEvent(o).call()), 0L, 20L);
+
+        System.out.println("[GamesCore] " + getDescription().getVersion() + " - Spigot plugin enabled.");
     }
 
     @Override

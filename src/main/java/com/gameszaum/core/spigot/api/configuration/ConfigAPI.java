@@ -7,11 +7,9 @@ import org.bukkit.plugin.Plugin;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.Serializable;
 
-public class ConfigAPI implements Serializable {
+public class ConfigAPI {
 
-    private static final long serialVersionUID = 1L;
     private File arch;
     private FileConfiguration config;
 

@@ -1,15 +1,15 @@
 package com.gameszaum.core.spigot.listener;
 
-import com.gameszaum.core.other.classes.ClassGetter;
+import com.gameszaum.core.spigot.api.loader.ClassGetter;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
-import org.bukkit.plugin.Plugin;
+import org.bukkit.plugin.java.JavaPlugin;
 
 public class ListenerLoader {
 
-    private Plugin plugin;
+    private JavaPlugin plugin;
 
-    public ListenerLoader(Plugin plugin) {
+    public ListenerLoader(JavaPlugin plugin) {
         this.plugin = plugin;
     }
 

@@ -6,6 +6,7 @@ import lombok.Getter;
 @AllArgsConstructor @Getter
 public class DatabaseCredentials {
 
-    private String host, db, port, user, pass;
+    private String host, db, user, pass;
+    private int port;
 
 }

@@ -51,13 +51,13 @@ public class Menu implements MenuHelper {
                 int slot = event.getRawSlot();
                 InventoryAction a = event.getAction();
 
-                if (item == null || item.getType() == Material.AIR) {
+                if (item == null || item.getType() == Material.AIR || item.getTypeId() == 0) {
                     if (!runempty) return;
                 }
 
                 if (inv.getName().equals(title)) {
                     if (inv.equals(inventory)) {
-                        if (slot <= (rows*9)-1) {
+                        if (slot <= (rows * 9) - 1) {
                             event.setCancelled(true);
                             if (hasAction(slot)) commands.get(slot).run(player, inv, item, slot, a);
                             if (gaction != null) gaction.run(player, inv, item, slot, a);
@@ -105,11 +105,12 @@ public class Menu implements MenuHelper {
         for (int i = 0; i <= h; i++) {
             if (!content.containsKey(i)) return i;
         }
-        return h+1;
+        return h + 1;
     }
 
     public void setContents(ItemStack[] contents) throws ArrayIndexOutOfBoundsException {
-        if (contents.length > rows*9) throw new ArrayIndexOutOfBoundsException("setContents() : Contents are larger than inventory.");
+        if (contents.length > rows * 9)
+            throw new ArrayIndexOutOfBoundsException("setContents() : Contents are larger than inventory.");
         content.clear();
         for (int i = 0; i < contents.length; i++) {
             if (contents[i] != null && contents[i].getType() != Material.AIR) content.put(i, contents[i]);
@@ -117,7 +118,7 @@ public class Menu implements MenuHelper {
     }
 
     public void addItem(ItemStack item) {
-        if (nextOpenSlot() > (rows*9)-1) {
+        if (nextOpenSlot() > (rows * 9) - 1) {
             plugin.getLogger().info("addItem() : Inventory is full.");
             return;
         }
@@ -125,7 +126,8 @@ public class Menu implements MenuHelper {
     }
 
     public void setItem(int slot, ItemStack item) throws IndexOutOfBoundsException {
-        if (slot < 0 || slot > (rows*9)-1) throw new IndexOutOfBoundsException("setItem() : Slot is outside inventory.");
+        if (slot < 0 || slot > (rows * 9) - 1)
+            throw new IndexOutOfBoundsException("setItem() : Slot is outside inventory.");
         if (item == null || item.getType() == Material.AIR) {
             removeItem(slot);
             return;
@@ -134,13 +136,15 @@ public class Menu implements MenuHelper {
     }
 
     public void fill(ItemStack item) {
-        for (int i = 0; i < rows*9; i++) content.put(i, item);
+        for (int i = 0; i < rows * 9; i++) content.put(i, item);
     }
 
     public void fillRange(int s, int e, ItemStack item) throws IndexOutOfBoundsException {
         if (e <= s) throw new IndexOutOfBoundsException("fillRange() : Ending index must be less than starting index.");
-        if (s < 0 || s > (rows*9)-1) throw new IndexOutOfBoundsException("fillRange() : Starting index is outside inventory.");
-        if (e < 0 || e > (rows*9)-1) throw new IndexOutOfBoundsException("fillRange() : Ending index is outside inventory.");
+        if (s < 0 || s > (rows * 9) - 1)
+            throw new IndexOutOfBoundsException("fillRange() : Starting index is outside inventory.");
+        if (e < 0 || e > (rows * 9) - 1)
+            throw new IndexOutOfBoundsException("fillRange() : Ending index is outside inventory.");
         for (int i = s; i <= e; i++) content.put(i, item);
     }
 
@@ -166,9 +170,10 @@ public class Menu implements MenuHelper {
     }
 
     public void build() {
-        this.inventory = Bukkit.createInventory(null, rows*9, this.title);
+        this.inventory = Bukkit.createInventory(null, rows * 9, this.title);
         inventory.clear();
-        for (Map.Entry<Integer, ItemStack> entry : content.entrySet()) inventory.setItem(entry.getKey(), entry.getValue());
+        for (Map.Entry<Integer, ItemStack> entry : content.entrySet())
+            inventory.setItem(entry.getKey(), entry.getValue());
     }
 
     public Inventory getMenu() {
@@ -207,6 +212,7 @@ public class Menu implements MenuHelper {
 
         return item;
     }
+
     public ItemStack createItem(Material material, int amount, String name, String lore, short durability, byte data) throws IndexOutOfBoundsException {
         if (amount < 1 || amount > 64) {
             throw new IndexOutOfBoundsException("Amount should be between 1 and 64.");

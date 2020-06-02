@@ -1,13 +1,17 @@
 package com.gameszaum.core.other.database.mysql;
 
 import com.gameszaum.core.other.database.DatabaseCredentials;
-import com.gameszaum.core.spigot.plugin.GamesPlugin;
 
 import java.sql.*;
 
 public class MySQLServiceImpl implements MySQLService {
 
     private Connection connection;
+    private String prefix;
+
+    public MySQLServiceImpl(String prefix) {
+        this.prefix = prefix;
+    }
 
     @Override
     public void createConnection(DatabaseCredentials credentials) {
@@ -15,7 +19,7 @@ public class MySQLServiceImpl implements MySQLService {
             connection = DriverManager.getConnection("jdbc:mysql://" + credentials.getHost() + ":"
                             + credentials.getPort() + "/" + credentials.getDb(),
                     credentials.getUser(), credentials.getPass());
-            System.out.println("[" + GamesPlugin.getPlugin(GamesPlugin.class).getDescription().getPrefix() + "] MySQL connected.");
+            System.out.println("[" + prefix + "] MySQL connected.");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -25,7 +29,7 @@ public class MySQLServiceImpl implements MySQLService {
     public void closeConnection() {
         try {
             connection.close();
-            System.out.println("[" + GamesPlugin.getPlugin(GamesPlugin.class).getDescription().getPrefix() + "] MySQL closed.");
+            System.out.println("[" + prefix + "] MySQL closed.");
         } catch (SQLException e) {
             e.printStackTrace();
         }
