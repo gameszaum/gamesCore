@@ -31,6 +31,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.github.paperspigot:paperspigot-api:1.8.8-R0.1-SNAPSHOT" level="project" />
     <orderEntry type="module-library">
       <library name="Maven: bungeecord:net.md_5:1110">
         <CLASSES>

@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="897209db-b5ec-48b0-8c97-51d73a3109dd" name="Default" comment="started Bungee system and moved ListenerLoader to the right package.">
+    <list default="true" id="897209db-b5ec-48b0-8c97-51d73a3109dd" name="Default" comment="fixed MySQL connection bug and updated GamesBungee">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/Bungee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/Bungee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/plugin/GamesBungee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/plugin/GamesBungee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/classes/ClassGetter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/DatabaseCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/DatabaseCredentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/mysql/MySQLServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/mysql/MySQLServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/configuration/ConfigAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/configuration/ConfigAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/server/PingServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/server/PingServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/listener/ListenerLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/listener/ListenerLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/plugin/GamesCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/plugin/GamesCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/games-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/games-core-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-games-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-games-core-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/games-core.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587015071743</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixed MySQL connection bug and updated GamesBungee">
+      <created>1591068979019</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1591068979019</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -204,7 +199,8 @@
     <MESSAGE value="change the project structure and created PermissionService" />
     <MESSAGE value="added some API's, changed MySQLServiceImpl and build games-core." />
     <MESSAGE value="started Bungee system and moved ListenerLoader to the right package." />
-    <option name="LAST_COMMIT_MESSAGE" value="started Bungee system and moved ListenerLoader to the right package." />
+    <MESSAGE value="fixed MySQL connection bug and updated GamesBungee" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed MySQL connection bug and updated GamesBungee" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -248,14 +244,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="189" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591064228946" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1587015073592">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1591148667977">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587015073592" />
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1587133797507">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591148667977" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1591166059537">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1587133797507" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591166059537" />
     <state x="209" y="78" key="new project wizard" timestamp="1586884968107">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
