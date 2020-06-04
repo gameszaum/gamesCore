@@ -6,14 +6,18 @@ First of all, download the library in release page (could be a SNAPSHOT version)
 
 ## Plugging in maven
 
-You need to define the scope in system and put in the systemPath the library path, example bellow.
+You need to put the dependency below, with the jitpack.io repository.
+
+
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
 
         <dependency>
-            <groupId>com.gameszaum.core</groupId>
-            <artifactId>games-core</artifactId>
+            <groupId>com.github.gameszaum</groupId>
+            <artifactId>gamesCore</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>system</scope>
-            <systemPath>C:/APIs/games-core-1.0-SNAPSHOT.jar</systemPath>
         </dependency>
         
 ## Methods 
