@@ -26,4 +26,4 @@ Read [USE](https://github.com/gameszaum/gamesCore/blob/master/USE.md) file to kn
 
 Do you want to help the library maintance? Contact-me in my discord server, [discord server](http://discord.gameszaum.com) or click bellow.  
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DZGUGVQ9A4NHN)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=9CP3LMVYY2VQE&currency_code=BRL&source=url)
