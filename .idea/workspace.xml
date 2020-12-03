@@ -4,23 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="897209db-b5ec-48b0-8c97-51d73a3109dd" name="Default" comment="fixed MySQL connection bug and updated GamesBungee">
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+    <list default="true" id="897209db-b5ec-48b0-8c97-51d73a3109dd" name="Default" comment="changed classes name and builded the jar project.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/games-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/games-core.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/plugin/GamesCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/plugin/GamesCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/scoreboard/ScoreBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/scoreboard/ScoreBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/scoreboard/data/ScoreDataImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/scoreboard/data/impl/ScoreDataImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/scoreboard/exception/ScoreLimiteLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/scoreboard/exception/ScoreLimiteException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dependencies/BungeeCord.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dependencies/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/games-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/games-core-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-games-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-games-core-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591068979019</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="changed classes name and builded the jar project.">
+      <created>1606962253765</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1606962253765</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,7 +221,8 @@
     <MESSAGE value="added some API's, changed MySQLServiceImpl and build games-core." />
     <MESSAGE value="started Bungee system and moved ListenerLoader to the right package." />
     <MESSAGE value="fixed MySQL connection bug and updated GamesBungee" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed MySQL connection bug and updated GamesBungee" />
+    <MESSAGE value="changed classes name and builded the jar project." />
+    <option name="LAST_COMMIT_MESSAGE" value="changed classes name and builded the jar project." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="masterDetails">
