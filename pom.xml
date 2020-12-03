@@ -18,7 +18,7 @@
     <url>gameszaum.com</url>
 
     <build>
-        <defaultGoal>clean package</defaultGoal>
+        <defaultGoal>clean install</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -56,6 +56,10 @@
 
     <repositories>
         <repository>
+            <id>bungeecord-repo</id>
+            <url>https://mvnrepository.com/artifact/net.md-5/bungeecord-api </url>
+        </repository>
+        <repository>
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
@@ -66,11 +70,10 @@
     </repositories>
 
     <dependencies>
-
         <dependency>
             <groupId>net.md-5</groupId>
             <artifactId>bungeecord-api</artifactId>
-            <version>1.15-SNAPSHOT</version>
+            <version>1.16-R0.3</version>
             <scope>provided</scope>
         </dependency>
 
@@ -79,7 +82,7 @@
             <artifactId>spigot-api</artifactId>
             <version>1.8.8-R0.1-SNAPSHOT</version>
             <scope>system</scope>
-            <systemPath>C:/APIs/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar</systemPath>
+            <systemPath>C:/server/spigot-1.8.8-R0.1-SNAPSHOT-latest.jar</systemPath>
         </dependency>
 
         <dependency>
@@ -98,6 +101,12 @@
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
             <version>3.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.44</version>
         </dependency>
     </dependencies>
 </project>

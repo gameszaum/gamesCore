@@ -6,7 +6,7 @@ import com.gameszaum.core.spigot.event.registry.TimeSecondEvent;
 import com.gameszaum.core.spigot.permission.PermissionService;
 import com.gameszaum.core.spigot.permission.service.PermissionServiceImpl;
 import com.gameszaum.core.spigot.scoreboard.data.ScoreData;
-import com.gameszaum.core.spigot.scoreboard.data.ScoreDataImpl;
+import com.gameszaum.core.spigot.scoreboard.data.impl.ScoreDataImpl;
 import org.bukkit.Bukkit;
 
 /*

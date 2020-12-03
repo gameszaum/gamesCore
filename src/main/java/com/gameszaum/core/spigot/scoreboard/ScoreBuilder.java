@@ -2,7 +2,7 @@ package com.gameszaum.core.spigot.scoreboard;
 
 import com.gameszaum.core.spigot.Services;
 import com.gameszaum.core.spigot.scoreboard.data.ScoreData;
-import com.gameszaum.core.spigot.scoreboard.exception.ScoreLimiteLine;
+import com.gameszaum.core.spigot.scoreboard.exception.ScoreLimiteException;
 import com.gameszaum.core.spigot.scoreboard.helper.ScoreHelper;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -69,7 +69,7 @@ public class ScoreBuilder implements ScoreHelper {
             team.setPrefix(pre);
             team.setSuffix(suf);
         } else {
-            new ScoreLimiteLine().printStackTrace();
+            new ScoreLimiteException().printStackTrace();
         }
     }
 
