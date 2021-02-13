@@ -5,9 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="897209db-b5ec-48b0-8c97-51d73a3109dd" name="Default" comment="changed classes name and builded the jar project.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/item/skull/SkullColors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/item/skull/SkullCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_3_1_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/games-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/games-core.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/Bungee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/Bungee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/command/BungeeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/command/BungeeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/command/asserts/BungeeCommandAsserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/command/asserts/BungeeCommandAsserts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/command/base/BungeeCommandBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/command/base/BungeeCommandBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/plugin/GamesBungee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/plugin/GamesBungee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/mysql/MySQLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/mysql/MySQLService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/mysql/MySQLServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/mysql/impl/MySQLServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/loader/ClassGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/util/ClassGetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/server/PingServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/server/PingServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/builder/CommandBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/builder/CommandBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/builder/CommandBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/builder/CommandBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/registry/ExampleCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/registry/ExampleCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/listener/ListenerLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/listener/ListenerLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/menu/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/menu/action/ItemAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/menu/action/ItemAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/games-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/games-core-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-games-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-games-core-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,12 +46,21 @@
         <option value="FxmlFile" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -48,7 +83,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mine-regen" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../clouth/clouth/clouth-core" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -58,6 +94,12 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\Documents\Projects\Util\games-core\src\main\resources\dependencies" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\api\item" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.gameszaum.core.spigot.api.item" />
     </key>
   </component>
   <component name="RunManager">
@@ -197,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606962253765</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="updated mysql-connector dependency">
+      <created>1606962956741</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1606962956741</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,7 +271,8 @@
     <MESSAGE value="started Bungee system and moved ListenerLoader to the right package." />
     <MESSAGE value="fixed MySQL connection bug and updated GamesBungee" />
     <MESSAGE value="changed classes name and builded the jar project." />
-    <option name="LAST_COMMIT_MESSAGE" value="changed classes name and builded the jar project." />
+    <MESSAGE value="updated mysql-connector dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated mysql-connector dependency" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="masterDetails">

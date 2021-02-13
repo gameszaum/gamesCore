@@ -54,6 +54,5 @@ public class PingServer {
             e.printStackTrace();
         }
     }
-
-
+    
 }

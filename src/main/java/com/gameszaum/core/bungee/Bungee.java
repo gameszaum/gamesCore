@@ -27,7 +27,7 @@ public final class Bungee extends GamesBungee {
             } else {
                 sender.sendMessage(TextComponent.fromLegacyText("Você não é o gameszaum."));
             }
-        }).runAsync().register("gameszaum");
+        }).runAsync().register(this,"gameszaum");
 
         System.out.println("[GamesCore] " + getDescription().getVersion() + " - BungeeCord plugin enabled.");
     }

@@ -1,8 +1,9 @@
 package com.gameszaum.core.bungee.command;
 
-import com.gameszaum.core.bungee.Bungee;
 import com.gameszaum.core.bungee.command.base.BungeeCommandBase;
 import com.gameszaum.core.bungee.command.builder.BungeeCommandBuilder;
+import com.gameszaum.core.bungee.command.helper.BungeeCommandHelper;
+import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.plugin.Command;
 
@@ -17,13 +18,18 @@ public class BungeeCommand {
 
     static {
         commands = new HashSet<>();
-        proxy = Bungee.getInstance().getProxy();
+        proxy = ProxyServer.getInstance();
     }
 
     public static BungeeCommandBase create(BungeeCommandBuilder builder) {
-        commands.add((BungeeCommandBase) builder);
-
-        return (BungeeCommandBase) builder;
+        BungeeCommandBase base = new BungeeCommandBase() {
+            @Override
+            public void handle(CommandSender sender, BungeeCommandHelper helper, String... args) {
+                builder.handle(sender, helper, args);
+            }
+        };
+        commands.add(base);
+        return base;
     }
 
     public static void delete(String alias0) {
@@ -34,17 +40,17 @@ public class BungeeCommand {
                 findFirst().ifPresent(command -> commands.remove(command));
     }
 
-    public static BungeeCommandBase getCommandBase(String alias0) {
+    private static BungeeCommandBase getCommandBase(String alias0) {
         return commands.stream().filter(command -> command.getAlias()[0].equalsIgnoreCase(alias0)).findFirst().orElse(null);
     }
 
-    public static Command getCommandClass(String alias0) {
+    private static Command getCommandClass(String alias0) {
         return proxy.getPluginManager().getCommands().stream().map(Map.Entry::getValue).
                 filter(command -> command.getName().equalsIgnoreCase(alias0)).findFirst().
                 orElse(null);
     }
 
-    public static Set<BungeeCommandBase> getCommands() {
+    private static Set<BungeeCommandBase> getCommands() {
         return commands;
     }
 }

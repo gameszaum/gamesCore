@@ -2,7 +2,7 @@ package com.gameszaum.core.spigot.menu;
 
 import com.gameszaum.core.spigot.menu.action.ItemAction;
 import com.gameszaum.core.spigot.menu.helper.MenuHelper;
-import com.gameszaum.core.spigot.plugin.GamesCore;
+import com.gameszaum.core.spigot.plugin.GamesPlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -16,15 +16,15 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
 public class Menu implements MenuHelper {
 
     private String title;
-    private int rows = 3;
+    private final int rows;
     private HashMap<Integer, ItemStack> content = new HashMap<>();
     private HashMap<Integer, ItemAction> commands = new HashMap<>();
     private Inventory inventory;
@@ -32,11 +32,11 @@ public class Menu implements MenuHelper {
     private ItemAction gaction;
     private boolean runempty = true;
 
-    public Menu(String title, int rows) {
+    public Menu(String title, int rows, GamesPlugin plugin) {
         if (rows < 1 || rows > 6) throw new IndexOutOfBoundsException("Menu can only have between 1 and 6 rows.");
         this.title = title;
         this.rows = rows;
-        this.plugin = GamesCore.getInstance();
+        this.plugin = plugin;
 
         setListener(plugin);
     }
@@ -45,7 +45,6 @@ public class Menu implements MenuHelper {
         pl.getServer().getPluginManager().registerEvents(new Listener() {
             @EventHandler
             public void onInvClick(InventoryClickEvent event) {
-                Player player = (Player) event.getWhoClicked();
                 Inventory inv = event.getInventory();
                 ItemStack item = event.getCurrentItem();
                 int slot = event.getRawSlot();
@@ -54,13 +53,16 @@ public class Menu implements MenuHelper {
                 if (item == null || item.getType() == Material.AIR || item.getTypeId() == 0) {
                     if (!runempty) return;
                 }
-
                 if (inv.getName().equals(title)) {
                     if (inv.equals(inventory)) {
                         if (slot <= (rows * 9) - 1) {
                             event.setCancelled(true);
-                            if (hasAction(slot)) commands.get(slot).run(player, inv, item, slot, a);
-                            if (gaction != null) gaction.run(player, inv, item, slot, a);
+                            if (hasAction(slot)) {
+                                commands.get(slot).run(inv, item, slot, a);
+                            }
+                            if (gaction != null) {
+                                gaction.run(inv, item, slot, a);
+                            }
                         }
                     }
                 }
@@ -88,9 +90,7 @@ public class Menu implements MenuHelper {
 
     @Deprecated
     public void removeAction(int slot) {
-        if (commands.containsKey(slot)) {
-            commands.remove(slot);
-        }
+        commands.remove(slot);
     }
 
     public void runWhenEmpty(boolean state) {
@@ -143,13 +143,13 @@ public class Menu implements MenuHelper {
         if (e <= s) throw new IndexOutOfBoundsException("fillRange() : Ending index must be less than starting index.");
         if (s < 0 || s > (rows * 9) - 1)
             throw new IndexOutOfBoundsException("fillRange() : Starting index is outside inventory.");
-        if (e < 0 || e > (rows * 9) - 1)
+        if (e > rows * 9 - 1)
             throw new IndexOutOfBoundsException("fillRange() : Ending index is outside inventory.");
         for (int i = s; i <= e; i++) content.put(i, item);
     }
 
     public void removeItem(int slot) {
-        if (content.containsKey(slot)) content.remove(slot);
+        content.remove(slot);
     }
 
     public ItemStack getItem(int slot) {
@@ -196,16 +196,11 @@ public class Menu implements MenuHelper {
         ItemStack item = new ItemStack(material, amount);
         ItemMeta meta = item.getItemMeta();
 
-        if (name != null && name != "") {
+        if (name != null && !name.equals("")) {
             meta.setDisplayName(name);
         }
-        if (lore != null && lore != "") {
-            String[] lines = lore.split(Pattern.quote("^$"));
-            List<String> newlore = new ArrayList<String>();
-            for (String s : lines) {
-                newlore.add(s);
-            }
-            meta.setLore(newlore);
+        if (lore != null && !lore.equals("")) {
+            meta.setLore(new ArrayList<>(Arrays.asList(lore.split(Pattern.quote("^$")))));
         }
         item.setDurability(durability);
         item.setItemMeta(meta);
@@ -220,16 +215,11 @@ public class Menu implements MenuHelper {
         ItemStack item = new ItemStack(material, amount, data);
         ItemMeta meta = item.getItemMeta();
 
-        if (name != null && name != "") {
+        if (name != null && !name.equals("")) {
             meta.setDisplayName(name);
         }
-        if (lore != null && lore != "") {
-            String[] lines = lore.split(Pattern.quote("^$"));
-            List<String> newlore = new ArrayList<String>();
-            for (String s : lines) {
-                newlore.add(s);
-            }
-            meta.setLore(newlore);
+        if (lore != null && !lore.equals("")) {
+            meta.setLore(new ArrayList<>(Arrays.asList(lore.split(Pattern.quote("^$")))));
         }
         item.setDurability(durability);
         item.setItemMeta(meta);

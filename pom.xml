@@ -14,6 +14,7 @@
     <description>A minecraft plugin core for personal and public projects.</description>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
     <url>gameszaum.com</url>
 
@@ -41,6 +42,12 @@
                         </goals>
                         <configuration>
                             <minimizeJar>true</minimizeJar>
+                            <relocations>
+                                <relocation>
+                                    <pattern>io.netty</pattern>
+                                    <shadedPattern>relocated.private.io.netty</shadedPattern>
+                                </relocation>
+                            </relocations>
                         </configuration>
                     </execution>
                 </executions>
@@ -57,7 +64,7 @@
     <repositories>
         <repository>
             <id>bungeecord-repo</id>
-            <url>https://mvnrepository.com/artifact/net.md-5/bungeecord-api </url>
+            <url>https://mvnrepository.com/artifact/net.md-5/bungeecord-api</url>
         </repository>
         <repository>
             <id>spigot-repo</id>
@@ -98,15 +105,16 @@
         </dependency>
 
         <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>3.1.0</version>
+            <groupId>io.lettuce</groupId>
+            <artifactId>lettuce-core</artifactId>
+            <version>6.1.0.M1</version>
+            <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>[8.0.16,)</version>
+            <version>8.0.16</version>
         </dependency>
     </dependencies>
 </project>

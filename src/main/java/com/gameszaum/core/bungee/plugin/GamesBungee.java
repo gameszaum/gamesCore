@@ -35,7 +35,7 @@ public abstract class GamesBungee extends Plugin implements BungeeLifeCycle {
         }
     }
 
-    private Configuration generateConfig(GamesBungee bungee) {
+    public Configuration generateConfig(GamesBungee bungee) {
         if (!bungee.getDataFolder().exists())
             bungee.getDataFolder().mkdirs();
 

@@ -2,6 +2,7 @@ package com.gameszaum.core.spigot.command.builder;
 
 import com.gameszaum.core.spigot.command.helper.CommandHelperImpl;
 import com.gameszaum.core.spigot.plugin.GamesCore;
+import com.gameszaum.core.spigot.plugin.GamesPlugin;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -47,9 +48,9 @@ public abstract class CommandBase implements CommandExecutor, CommandBuilder {
     }
 
     @Override
-    public void setCommand(String... alias) {
+    public void setCommand(GamesPlugin plugin, String... alias) {
         this.alias = alias;
-        GamesCore.getInstance().registerCommand(this, alias);
+        plugin.registerCommand(this, alias);
     }
 
     @Override

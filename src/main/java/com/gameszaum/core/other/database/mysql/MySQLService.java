@@ -1,13 +1,11 @@
 package com.gameszaum.core.other.database.mysql;
 
 
-import com.gameszaum.core.other.database.DatabaseCredentials;
-
 import java.sql.Connection;
 
 public interface MySQLService {
 
-    void createConnection(DatabaseCredentials credentials);
+    void createConnection();
 
     void closeConnection();
 

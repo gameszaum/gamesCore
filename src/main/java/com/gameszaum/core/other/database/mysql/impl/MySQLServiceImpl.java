@@ -1,26 +1,31 @@
-package com.gameszaum.core.other.database.mysql;
+package com.gameszaum.core.other.database.mysql.impl;
 
 import com.gameszaum.core.other.database.DatabaseCredentials;
+import com.gameszaum.core.other.database.mysql.MySQLService;
 
 import java.sql.*;
 
 public class MySQLServiceImpl implements MySQLService {
 
-    private Connection connection;
     private String prefix;
+    private DatabaseCredentials credentials;
+    private Connection connection;
 
-    public MySQLServiceImpl(String prefix) {
+    public MySQLServiceImpl(String prefix, DatabaseCredentials credentials) {
         this.prefix = prefix;
+        this.credentials = credentials;
     }
 
     @Override
-    public void createConnection(DatabaseCredentials credentials) {
+    public void createConnection() {
+        long ms = System.currentTimeMillis();
+
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://" + credentials.getHost() + ":"
-                            + credentials.getPort() + "/" + credentials.getDb(),
-                    credentials.getUser(), credentials.getPass());
-            System.out.println("[" + prefix + "] MySQL connected.");
-        } catch (SQLException e) {
+            Class.forName("com.mysql.jdbc.Driver");
+            connection = DriverManager.getConnection("JDBC:mysql://" + credentials.getHost() + ":"
+                    + credentials.getPort() + "/" + credentials.getDb() + "?characterEncoding=latin1&useConfigs=maxPerformance", credentials.getUser(), credentials.getPass());
+            System.out.println("[" + prefix + "] MySQL connected. (" + (System.currentTimeMillis() - ms) + "ms)");
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
@@ -37,13 +42,36 @@ public class MySQLServiceImpl implements MySQLService {
 
     @Override
     public Connection getConnection() {
+        long ms = System.currentTimeMillis();
+
+        try {
+            PreparedStatement statement = connection.prepareStatement("SELECT 1 FROM DUAL;");
+            ResultSet resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                return connection;
+            }
+            resultSet.close();
+            statement.close();
+        } catch (SQLException e) {
+            System.out.println("[" + prefix + "] Connection is down or terminated. Reconnecting...");
+
+            try {
+                connection = DriverManager.getConnection("JDBC:mysql://" + credentials.getHost() + ":"
+                        + credentials.getPort() + "/" + credentials.getDb() + "?characterEncoding=latin1&useConfigs=maxPerformance", credentials.getUser(), credentials.getPass());
+                System.out.println("[" + prefix + "] MySQL reconnected. (" + (System.currentTimeMillis() - ms) + "ms)");
+                return connection;
+            } catch (SQLException e1) {
+                e1.printStackTrace();
+            }
+        }
         return connection;
     }
 
     @Override
     public void executeQuery(String sql) {
         try {
-            PreparedStatement ps = connection.prepareStatement(sql);
+            PreparedStatement ps = getConnection().prepareStatement(sql);
             ps.executeUpdate();
             ps.close();
         } catch (SQLException e) {
@@ -55,7 +83,7 @@ public class MySQLServiceImpl implements MySQLService {
     public boolean contains(String table, String where, String whereResult) {
         PreparedStatement ps;
         try {
-            ps = connection.prepareStatement("SELECT * FROM `" + table + "` WHERE `" + where + "` = '" + whereResult + "';");
+            ps = getConnection().prepareStatement("SELECT * FROM `" + table + "` WHERE `" + where + "` = '" + whereResult + "';");
             ResultSet rs = ps.executeQuery();
             if (!rs.next()) return false;
 
@@ -73,7 +101,7 @@ public class MySQLServiceImpl implements MySQLService {
         try {
             String query = "UPDATE `" + table + "` SET `" + update + "` = '" + updateResult + "' WHERE `" + where + "` = '" + whereResult + "';";
 
-            ps = connection.prepareStatement(query);
+            ps = getConnection().prepareStatement(query);
             ps.executeUpdate();
             ps.close();
         } catch (SQLException e) {
@@ -86,7 +114,7 @@ public class MySQLServiceImpl implements MySQLService {
         PreparedStatement ps;
         try {
             String query = "DELETE FROM `" + table + "` WHERE `" + where + "` = '" + whereResult + "';";
-            ps = connection.prepareStatement(query);
+            ps = getConnection().prepareStatement(query);
             ps.executeUpdate();
             ps.close();
         } catch (SQLException e) {
@@ -98,7 +126,7 @@ public class MySQLServiceImpl implements MySQLService {
     public String getString(String table, String where, String whereResult, String column) {
         PreparedStatement ps;
         try {
-            ps = connection.prepareStatement("SELECT * FROM `" + table + "` WHERE `" + where + "` = '" + whereResult + "';");
+            ps = getConnection().prepareStatement("SELECT * FROM `" + table + "` WHERE `" + where + "` = '" + whereResult + "';");
             ResultSet rs = ps.executeQuery();
             rs.next();
             String s = rs.getString(column);
@@ -115,7 +143,7 @@ public class MySQLServiceImpl implements MySQLService {
     public Integer getInteger(String table, String where, String whereResult, String column) {
         PreparedStatement ps;
         try {
-            ps = connection.prepareStatement("SELECT * FROM `" + table + "` WHERE `" + where + "` = '" + whereResult + "';");
+            ps = getConnection().prepareStatement("SELECT * FROM `" + table + "` WHERE `" + where + "` = '" + whereResult + "';");
             ResultSet rs = ps.executeQuery();
             rs.next();
             int i = rs.getInt(column);
@@ -132,7 +160,7 @@ public class MySQLServiceImpl implements MySQLService {
     public Long getLong(String table, String where, String whereResult, String column) {
         PreparedStatement ps;
         try {
-            ps = connection.prepareStatement("SELECT * FROM `" + table + "` WHERE `" + where + "` = '" + whereResult + "';");
+            ps = getConnection().prepareStatement("SELECT * FROM `" + table + "` WHERE `" + where + "` = '" + whereResult + "';");
             ResultSet rs = ps.executeQuery();
             rs.next();
             long l = rs.getLong(column);

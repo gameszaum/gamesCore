@@ -4,6 +4,7 @@ import com.gameszaum.core.spigot.command.Command;
 import com.gameszaum.core.spigot.command.builder.CommandBase;
 import com.gameszaum.core.spigot.command.helper.CommandHelper;
 import com.gameszaum.core.spigot.menu.Menu;
+import com.gameszaum.core.spigot.plugin.GamesCore;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -21,14 +22,14 @@ public class ExampleCommands {
                     commandSender.sendMessage("/test - console command.");
                 }
             }
-        }).runAsync().setCommand("test");
+        }).runAsync().setCommand(GamesCore.getInstance(), "test");
 
         Command.create(new CommandBase() {
             @Override
             public void handler(CommandSender commandSender, CommandHelper helper, String... args) throws Exception {
-                new Menu("Teste", 3).showMenu(helper.getPlayer(commandSender));
+                new Menu("Teste", 3, GamesCore.getInstance()).showMenu(helper.getPlayer(commandSender));
             }
-        }).onlyPlayer().setCommand("menu");
+        }).onlyPlayer().setCommand(GamesCore.getInstance(), "menu");
     }
 
 }

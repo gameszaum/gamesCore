@@ -1,6 +1,4 @@
-package com.gameszaum.core.spigot.api.loader;
-
-import org.bukkit.plugin.java.JavaPlugin;
+package com.gameszaum.core.other.util;
 
 import java.io.IOException;
 import java.net.URL;
@@ -19,12 +17,12 @@ import java.util.jar.JarFile;
 // https://github.com/ddopson/java-class-enumerator
 public class ClassGetter {
 
-    public static ArrayList<Class<?>> getClassesForPackage(JavaPlugin plugin, String pkgname) {
+    public static ArrayList<Class<?>> getClassesForPackage(Object instance, String pkgname) {
         ArrayList<Class<?>> classes = new ArrayList<Class<?>>();
         // String relPath = pkgname.replace('.', '/');
 
         // Get a File object for the package
-        CodeSource src = plugin.getClass().getProtectionDomain().getCodeSource();
+        CodeSource src = instance.getClass().getProtectionDomain().getCodeSource();
         if (src != null) {
             URL resource = src.getLocation();
             resource.getPath();

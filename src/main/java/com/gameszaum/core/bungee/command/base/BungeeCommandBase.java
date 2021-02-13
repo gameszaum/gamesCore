@@ -1,14 +1,16 @@
 package com.gameszaum.core.bungee.command.base;
 
-import com.gameszaum.core.bungee.Bungee;
 import com.gameszaum.core.bungee.command.asserts.BungeeCommandAsserts;
 import com.gameszaum.core.bungee.command.builder.BungeeCommandBuilder;
 import com.gameszaum.core.bungee.command.helper.BungeeCommandHelper;
 import com.gameszaum.core.bungee.command.helper.impl.BungeeCommandHelperImpl;
 import lombok.Getter;
 import net.md_5.bungee.api.CommandSender;
+import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.chat.TextComponent;
+import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Command;
+import net.md_5.bungee.api.plugin.Plugin;
 
 public abstract class BungeeCommandBase implements BungeeCommandBuilder, BungeeCommandAsserts {
 
@@ -52,28 +54,40 @@ public abstract class BungeeCommandBase implements BungeeCommandBuilder, BungeeC
     }
 
     @Override
-    public void register(String... alias) {
+    public void register(Plugin plugin, String... alias) {
         this.alias = alias;
 
-        Bungee.getInstance().getProxy().getPluginManager().registerCommand(Bungee.getInstance(), new Command(alias[0], perm, alias) {
+        ProxyServer.getInstance().getPluginManager().registerCommand(plugin, new Command(alias[0], perm, alias) {
             @Override
             public void execute(CommandSender sender, String[] args) {
                 if (async) {
-                    Bungee.getInstance().getProxy().getScheduler().runAsync(Bungee.getInstance(), () -> {
-                        if (assertPlayer) {
+                    ProxyServer.getInstance().getScheduler().runAsync(plugin, () -> {
+                        if (assertPlayer && !(sender instanceof ProxiedPlayer)) {
                             sender.sendMessage(TextComponent.fromLegacyText("Only for players."));
                             return;
                         }
-                        if (sender.hasPermission(perm)) {
+                        if (perm != null) {
+                            if (sender.hasPermission(perm)) {
+                                handle(sender, new BungeeCommandHelperImpl(), args);
+                            } else {
+                                sender.sendMessage(TextComponent.fromLegacyText("§cVocê não possui permissão para executar este comando."));
+                            }
+                        } else {
                             handle(sender, new BungeeCommandHelperImpl(), args);
                         }
                     });
                 } else {
-                    if (assertPlayer) {
+                    if (assertPlayer && !(sender instanceof ProxiedPlayer)) {
                         sender.sendMessage(TextComponent.fromLegacyText("Only for players."));
                         return;
                     }
-                    if (sender.hasPermission(perm)) {
+                    if (perm != null) {
+                        if (sender.hasPermission(perm)) {
+                            handle(sender, new BungeeCommandHelperImpl(), args);
+                        } else {
+                            sender.sendMessage(TextComponent.fromLegacyText("§cVocê não possui permissão para executar este comando."));
+                        }
+                    } else {
                         handle(sender, new BungeeCommandHelperImpl(), args);
                     }
                 }
