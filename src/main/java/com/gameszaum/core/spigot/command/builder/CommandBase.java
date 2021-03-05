@@ -1,19 +1,21 @@
 package com.gameszaum.core.spigot.command.builder;
 
 import com.gameszaum.core.spigot.command.helper.CommandHelperImpl;
-import com.gameszaum.core.spigot.plugin.GamesCore;
 import com.gameszaum.core.spigot.plugin.GamesPlugin;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.scheduler.BukkitRunnable;
+
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public abstract class CommandBase implements CommandExecutor, CommandBuilder {
 
     private boolean async, onlyPlayer;
     private String perm;
     private String[] alias;
+    private ThreadPoolExecutor executor;
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
@@ -27,16 +29,13 @@ public abstract class CommandBase implements CommandExecutor, CommandBuilder {
         }
 
         if (async) {
-            new BukkitRunnable() {
-                @Override
-                public void run() {
-                    try {
-                        handler(commandSender, new CommandHelperImpl(), args);
-                    } catch (Exception e) {
-                        commandSender.sendMessage("§cAn error has occurred to execute this command §e/" + alias[0] + "§c.");
-                    }
+            CompletableFuture.runAsync(() -> {
+                try {
+                    handler(commandSender, new CommandHelperImpl(), args);
+                } catch (Exception e) {
+                    commandSender.sendMessage("§cAn error has occurred to execute this command §e/" + alias[0] + "§c.");
                 }
-            }.runTaskAsynchronously(GamesCore.getInstance());
+            }, executor);
         } else {
             try {
                 handler(commandSender, new CommandHelperImpl(), args);
@@ -68,6 +67,11 @@ public abstract class CommandBase implements CommandExecutor, CommandBuilder {
     @Override
     public CommandBuilder onlyPlayer() {
         this.onlyPlayer = true;
+        return this;
+    }
+
+    public CommandBase setExecutor(ThreadPoolExecutor executor){
+        this.executor = executor;
         return this;
     }
 }

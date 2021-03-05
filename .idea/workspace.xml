@@ -4,31 +4,16 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="897209db-b5ec-48b0-8c97-51d73a3109dd" name="Default" comment="changed classes name and builded the jar project.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/item/skull/SkullColors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/item/skull/SkullCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_6_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_3_1_0.xml" beforeDir="false" />
+    <list default="true" id="897209db-b5ec-48b0-8c97-51d73a3109dd" name="Default" comment="updated some stuffs and added lettuce-core dependency.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/USE.md" beforeDir="false" afterPath="$PROJECT_DIR$/USE.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/games-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/games-core.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/Bungee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/Bungee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/command/BungeeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/command/BungeeCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/command/asserts/BungeeCommandAsserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/command/asserts/BungeeCommandAsserts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/command/base/BungeeCommandBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/command/base/BungeeCommandBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/plugin/GamesBungee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/bungee/plugin/GamesBungee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/mysql/MySQLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/mysql/MySQLService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/mysql/MySQLServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/mysql/impl/MySQLServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/loader/ClassGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/util/ClassGetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/server/PingServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/server/PingServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/builder/CommandBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/builder/CommandBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/builder/CommandBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/builder/CommandBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/registry/ExampleCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/registry/ExampleCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/listener/ListenerLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/listener/ListenerLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/menu/action/ItemAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/menu/action/ItemAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/registry/ExampleCommands.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/plugin/GamesCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/plugin/GamesCore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/games-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/games-core-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
@@ -44,9 +29,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="package-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -246,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606962956741</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="updated some stuffs and added lettuce-core dependency.">
+      <created>1613255625055</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1613255625055</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -272,7 +264,8 @@
     <MESSAGE value="fixed MySQL connection bug and updated GamesBungee" />
     <MESSAGE value="changed classes name and builded the jar project." />
     <MESSAGE value="updated mysql-connector dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated mysql-connector dependency" />
+    <MESSAGE value="updated some stuffs and added lettuce-core dependency." />
+    <option name="LAST_COMMIT_MESSAGE" value="updated some stuffs and added lettuce-core dependency." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="masterDetails">
