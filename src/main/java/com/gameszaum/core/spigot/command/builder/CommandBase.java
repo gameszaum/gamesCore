@@ -16,6 +16,7 @@ public abstract class CommandBase implements CommandExecutor, CommandBuilder {
     private String perm;
     private String[] alias;
     private ThreadPoolExecutor executor;
+    private GamesPlugin plugin;
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
@@ -34,38 +35,46 @@ public abstract class CommandBase implements CommandExecutor, CommandBuilder {
                     handler(commandSender, new CommandHelperImpl(), args);
                 } catch (Exception e) {
                     commandSender.sendMessage("§cAn error has occurred to execute this command §e/" + alias[0] + "§c.");
+                    e.printStackTrace();
                 }
-            }, executor);
+            }, executor).whenComplete((unused, throwable) -> executor.shutdown());
         } else {
             try {
                 handler(commandSender, new CommandHelperImpl(), args);
             } catch (Exception e) {
                 commandSender.sendMessage("§cAn error has occurred to execute this command §e/" + alias[0] + "§c.");
+                e.printStackTrace();
             }
         }
         return false;
     }
 
     @Override
-    public void setCommand(GamesPlugin plugin, String... alias) {
+    public void register(String... alias) {
         this.alias = alias;
         plugin.registerCommand(this, alias);
     }
 
     @Override
-    public CommandBuilder runAsync() {
+    public CommandBuilder plugin(GamesPlugin plugin) {
+        this.plugin = plugin;
+        return this;
+    }
+
+    @Override
+    public CommandBuilder async() {
         this.async = true;
         return this;
     }
 
     @Override
-    public CommandBuilder onlyPermission(String perm) {
+    public CommandBuilder permission(String perm) {
         this.perm = perm;
         return this;
     }
 
     @Override
-    public CommandBuilder onlyPlayer() {
+    public CommandBuilder player() {
         this.onlyPlayer = true;
         return this;
     }
@@ -73,5 +82,9 @@ public abstract class CommandBase implements CommandExecutor, CommandBuilder {
     public CommandBase setExecutor(ThreadPoolExecutor executor){
         this.executor = executor;
         return this;
+    }
+
+    public GamesPlugin getPlugin() {
+        return plugin;
     }
 }

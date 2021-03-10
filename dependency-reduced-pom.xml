@@ -4,7 +4,7 @@
   <groupId>com.gameszaum.core</groupId>
   <artifactId>games-core</artifactId>
   <name>games-core</name>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.1-SNAPSHOT</version>
   <description>A minecraft plugin core for personal and public projects.</description>
   <url>gameszaum.com</url>
   <build>

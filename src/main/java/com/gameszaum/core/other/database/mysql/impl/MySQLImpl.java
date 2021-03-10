@@ -1,17 +1,17 @@
 package com.gameszaum.core.other.database.mysql.impl;
 
 import com.gameszaum.core.other.database.DatabaseCredentials;
-import com.gameszaum.core.other.database.mysql.MySQLService;
+import com.gameszaum.core.other.database.mysql.MySQL;
 
 import java.sql.*;
 
-public class MySQLServiceImpl implements MySQLService {
+public class MySQLImpl implements MySQL {
 
     private String prefix;
     private DatabaseCredentials credentials;
     private Connection connection;
 
-    public MySQLServiceImpl(String prefix, DatabaseCredentials credentials) {
+    public MySQLImpl(String prefix, DatabaseCredentials credentials) {
         this.prefix = prefix;
         this.credentials = credentials;
     }

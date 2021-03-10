@@ -9,12 +9,13 @@ C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\b
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\other\services\Model.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\other\util\ClassGetter.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\command\Command.java
+C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\other\database\mysql\MySQL.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\api\configuration\ConfigAPI.java
-C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\other\database\mysql\impl\MySQLServiceImpl.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\menu\action\ItemAction.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\scoreboard\data\ScoreData.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\menu\helper\MenuHelper.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\api\item\skull\SkullColors.java
+C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\other\database\mysql\impl\MySQLImpl.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\other\database\DatabaseCredentials.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\event\EventBuilder.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\Services.java
@@ -33,7 +34,6 @@ C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\s
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\bungee\command\asserts\BungeeCommandAsserts.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\command\loader\CommandRegister.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\bungee\command\base\BungeeCommandBase.java
-C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\other\database\mysql\MySQLService.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\command\helper\CommandHelperImpl.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\scoreboard\exception\ScoreLimiteException.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\command\builder\CommandBuilder.java
@@ -42,7 +42,6 @@ C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\s
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\scoreboard\ScoreBuilder.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\scoreboard\helper\ScoreHelper.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\bungee\Bungee.java
-C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\plugin\GamesCore.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\other\exception\model\ModelAlreadyExist.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\api\server\PingServer.java
 C:\Users\pC\Desktop\workspace\store\gamesCore\src\main\java\com\gameszaum\core\spigot\scoreboard\data\impl\ScoreDataImpl.java
