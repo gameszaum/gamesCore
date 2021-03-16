@@ -9,13 +9,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 public abstract class GamesPlugin extends JavaPlugin implements PluginLifeCycle {
 
     @Override
-    public void onEnable() {
-        enable();
+    public void onLoad() {
+        load();
     }
 
     @Override
-    public void onLoad() {
-        load();
+    public void onEnable() {
+        enable();
     }
 
     @Override

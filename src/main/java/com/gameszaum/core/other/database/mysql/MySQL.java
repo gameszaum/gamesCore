@@ -3,7 +3,7 @@ package com.gameszaum.core.other.database.mysql;
 
 import java.sql.Connection;
 
-public interface MySQLService {
+public interface MySQL {
 
     void createConnection();
 

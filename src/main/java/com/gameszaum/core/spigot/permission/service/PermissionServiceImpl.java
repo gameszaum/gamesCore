@@ -1,7 +1,7 @@
 package com.gameszaum.core.spigot.permission.service;
 
 import com.gameszaum.core.spigot.permission.PermissionService;
-import com.gameszaum.core.spigot.plugin.GamesCore;
+import com.gameszaum.core.spigot.plugin.GamesPlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.permissions.PermissionAttachment;
@@ -17,9 +17,11 @@ public class PermissionServiceImpl implements PermissionService {
 
     private Map<Player, Set<String>> map;
     private PermissionAttachment attachment;
+    private Plugin plugin;
 
-    public PermissionServiceImpl() {
-        map = new Hashtable<>();
+    public PermissionServiceImpl(GamesPlugin plugin) {
+        this.plugin = plugin;
+        this.map = new Hashtable<>();
     }
 
     @Override
@@ -63,7 +65,7 @@ public class PermissionServiceImpl implements PermissionService {
     @Override
     public void resetPermissions(Player player) {
         if (attachment == null) {
-            attachment = player.addAttachment(GamesCore.getInstance());
+            attachment = player.addAttachment(plugin);
         }
         attachment.getPermissions().forEach((s, aBoolean) -> attachment.unsetPermission(s));
     }
@@ -76,7 +78,7 @@ public class PermissionServiceImpl implements PermissionService {
     @Override
     public void load(Player player) {
         if (attachment == null) {
-            attachment = player.addAttachment(GamesCore.getInstance());
+            attachment = player.addAttachment(plugin);
         }
         getPlayerPermissions(player).forEach(strings -> strings.forEach(s -> {
             if (s.equals("*")) {

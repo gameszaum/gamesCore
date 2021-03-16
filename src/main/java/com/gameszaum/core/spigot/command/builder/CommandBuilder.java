@@ -8,12 +8,14 @@ public interface CommandBuilder {
 
     void handler(CommandSender commandSender, CommandHelper helper, String... args) throws Exception;
 
-    void setCommand(GamesPlugin plugin, String... alias);
+    void register(String... alias);
 
-    CommandBuilder onlyPlayer();
+    CommandBuilder plugin(GamesPlugin plugin);
 
-    CommandBuilder onlyPermission(String perm);
+    CommandBuilder player();
 
-    CommandBuilder runAsync();
+    CommandBuilder permission(String perm);
+
+    CommandBuilder async();
 
 }

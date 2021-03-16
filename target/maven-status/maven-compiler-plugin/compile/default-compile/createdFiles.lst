@@ -1,4 +1,5 @@
 com\gameszaum\core\other\exception\model\ModelDoesntExist.class
+com\gameszaum\core\spigot\command\builder\impl\CommandBuilderImpl.class
 com\gameszaum\core\spigot\scoreboard\data\ScoreData.class
 com\gameszaum\core\spigot\scoreboard\data\impl\ScoreDataImpl.class
 com\gameszaum\core\bungee\plugin\BungeeLifeCycle.class
@@ -8,9 +9,8 @@ com\gameszaum\core\bungee\command\BungeeCommand$1.class
 com\gameszaum\core\spigot\command\helper\CommandHelperImpl.class
 com\gameszaum\core\spigot\command\loader\CommandRegister.class
 com\gameszaum\core\spigot\api\title\Title.class
-com\gameszaum\core\other\database\mysql\impl\MySQLServiceImpl.class
+com\gameszaum\core\other\database\mysql\impl\MySQLImpl.class
 com\gameszaum\core\spigot\plugin\GamesPlugin.class
-com\gameszaum\core\spigot\command\Command.class
 com\gameszaum\core\spigot\plugin\PluginLifeCycle.class
 com\gameszaum\core\spigot\command\helper\CommandHelper.class
 com\gameszaum\core\bungee\command\builder\BungeeCommandBuilder.class
@@ -18,6 +18,7 @@ com\gameszaum\core\spigot\api\item\ItemBuilder.class
 com\gameszaum\core\other\util\ClassGetter.class
 com\gameszaum\core\spigot\event\registry\TimeSecondEvent.class
 com\gameszaum\core\spigot\api\title\ActionBarAPI.class
+com\gameszaum\core\other\database\mysql\MySQL.class
 com\gameszaum\core\bungee\command\BungeeCommand.class
 com\gameszaum\core\spigot\command\builder\CommandBuilder.class
 com\gameszaum\core\spigot\permission\service\PermissionServiceImpl.class
@@ -30,17 +31,15 @@ com\gameszaum\core\spigot\api\location\Cuboid.class
 com\gameszaum\core\other\exception\model\ModelCreateFailure.class
 com\gameszaum\core\spigot\menu\helper\MenuHelper.class
 com\gameszaum\core\bungee\command\base\BungeeCommandBase$1.class
-com\gameszaum\core\spigot\plugin\GamesCore.class
 com\gameszaum\core\other\services\Model.class
 com\gameszaum\core\spigot\api\server\PingServer.class
-com\gameszaum\core\spigot\command\builder\CommandBase.class
 com\gameszaum\core\spigot\event\EventBuilder.class
 com\gameszaum\core\spigot\scoreboard\helper\ScoreHelper.class
 com\gameszaum\core\spigot\menu\Menu$1.class
-com\gameszaum\core\other\database\mysql\MySQLService.class
 com\gameszaum\core\bungee\command\asserts\BungeeCommandAsserts.class
 com\gameszaum\core\bungee\command\helper\impl\BungeeCommandHelperImpl.class
 com\gameszaum\core\spigot\Services.class
+com\gameszaum\core\spigot\command\CommandCreator.class
 com\gameszaum\core\bungee\plugin\GamesBungee.class
 com\gameszaum\core\spigot\api\configuration\ConfigAPI.class
 com\gameszaum\core\other\database\DatabaseCredentials.class

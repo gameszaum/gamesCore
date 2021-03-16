@@ -1,4 +1,4 @@
-package com.gameszaum.core.spigot.command.builder;
+package com.gameszaum.core.spigot.command.builder.impl;
 
 import com.gameszaum.core.spigot.command.helper.CommandHelperImpl;
 import com.gameszaum.core.spigot.plugin.GamesPlugin;
@@ -10,12 +10,13 @@ import org.bukkit.entity.Player;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ThreadPoolExecutor;
 
-public abstract class CommandBase implements CommandExecutor, CommandBuilder {
+public abstract class CommandBuilderImpl implements CommandExecutor, com.gameszaum.core.spigot.command.builder.CommandBuilder {
 
     private boolean async, onlyPlayer;
     private String perm;
     private String[] alias;
     private ThreadPoolExecutor executor;
+    private GamesPlugin plugin;
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
@@ -34,44 +35,56 @@ public abstract class CommandBase implements CommandExecutor, CommandBuilder {
                     handler(commandSender, new CommandHelperImpl(), args);
                 } catch (Exception e) {
                     commandSender.sendMessage("§cAn error has occurred to execute this command §e/" + alias[0] + "§c.");
+                    e.printStackTrace();
                 }
-            }, executor);
+            }, executor).whenComplete((unused, throwable) -> executor.shutdown());
         } else {
             try {
                 handler(commandSender, new CommandHelperImpl(), args);
             } catch (Exception e) {
                 commandSender.sendMessage("§cAn error has occurred to execute this command §e/" + alias[0] + "§c.");
+                e.printStackTrace();
             }
         }
         return false;
     }
 
     @Override
-    public void setCommand(GamesPlugin plugin, String... alias) {
+    public void register(String... alias) {
         this.alias = alias;
         plugin.registerCommand(this, alias);
     }
 
     @Override
-    public CommandBuilder runAsync() {
+    public com.gameszaum.core.spigot.command.builder.CommandBuilder plugin(GamesPlugin plugin) {
+        this.plugin = plugin;
+        return this;
+    }
+
+    @Override
+    public com.gameszaum.core.spigot.command.builder.CommandBuilder async() {
         this.async = true;
         return this;
     }
 
     @Override
-    public CommandBuilder onlyPermission(String perm) {
+    public com.gameszaum.core.spigot.command.builder.CommandBuilder permission(String perm) {
         this.perm = perm;
         return this;
     }
 
     @Override
-    public CommandBuilder onlyPlayer() {
+    public com.gameszaum.core.spigot.command.builder.CommandBuilder player() {
         this.onlyPlayer = true;
         return this;
     }
 
-    public CommandBase setExecutor(ThreadPoolExecutor executor){
+    public com.gameszaum.core.spigot.command.builder.CommandBuilder executor(ThreadPoolExecutor executor){
         this.executor = executor;
         return this;
+    }
+
+    public GamesPlugin getPlugin() {
+        return plugin;
     }
 }
