@@ -1,4 +1,4 @@
-package com.gameszaum.core.spigot.command.builder;
+package com.gameszaum.core.spigot.command.builder.impl;
 
 import com.gameszaum.core.spigot.command.helper.CommandHelperImpl;
 import com.gameszaum.core.spigot.plugin.GamesPlugin;
@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ThreadPoolExecutor;
 
-public abstract class CommandBase implements CommandExecutor, CommandBuilder {
+public abstract class CommandBuilderImpl implements CommandExecutor, com.gameszaum.core.spigot.command.builder.CommandBuilder {
 
     private boolean async, onlyPlayer;
     private String perm;
@@ -56,30 +56,30 @@ public abstract class CommandBase implements CommandExecutor, CommandBuilder {
     }
 
     @Override
-    public CommandBuilder plugin(GamesPlugin plugin) {
+    public com.gameszaum.core.spigot.command.builder.CommandBuilder plugin(GamesPlugin plugin) {
         this.plugin = plugin;
         return this;
     }
 
     @Override
-    public CommandBuilder async() {
+    public com.gameszaum.core.spigot.command.builder.CommandBuilder async() {
         this.async = true;
         return this;
     }
 
     @Override
-    public CommandBuilder permission(String perm) {
+    public com.gameszaum.core.spigot.command.builder.CommandBuilder permission(String perm) {
         this.perm = perm;
         return this;
     }
 
     @Override
-    public CommandBuilder player() {
+    public com.gameszaum.core.spigot.command.builder.CommandBuilder player() {
         this.onlyPlayer = true;
         return this;
     }
 
-    public CommandBase setExecutor(ThreadPoolExecutor executor){
+    public com.gameszaum.core.spigot.command.builder.CommandBuilder executor(ThreadPoolExecutor executor){
         this.executor = executor;
         return this;
     }

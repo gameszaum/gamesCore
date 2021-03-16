@@ -1,5 +1,5 @@
 name: games-core
-version: 1.1-SNAPSHOT
+version: 1.1.1-SNAPSHOT
 main: com.gameszaum.core.spigot.plugin.GamesCore
 prefix: gamesCore
 authors: [gameszaum]

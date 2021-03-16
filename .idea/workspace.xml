@@ -5,25 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="897209db-b5ec-48b0-8c97-51d73a3109dd" name="Default" comment="updated some stuffs and added lettuce-core dependency.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/CommandCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/games-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/games-core.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/DatabaseCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/DatabaseCredentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/mysql/MySQLService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/mysql/MySQL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/mysql/impl/MySQLServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/mysql/impl/MySQLImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/builder/CommandBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/builder/CommandBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/builder/CommandBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/builder/CommandBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/permission/service/PermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/permission/service/PermissionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/plugin/GamesCore.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/plugin/GamesPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/plugin/GamesPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/plugin/PluginLifeCycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/plugin/PluginLifeCycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/builder/CommandBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/builder/impl/CommandBuilderImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/games-core-1.0-SNAPSHOT.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-games-core-1.0-SNAPSHOT.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +66,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../clouth/clouth/clouth-core" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -280,6 +272,10 @@
     <MESSAGE value="updated USE.md, README.md, refactored Command asynchronous method and removed ExampleCommands.java" />
     <option name="LAST_COMMIT_MESSAGE" value="updated USE.md, README.md, refactored Command asynchronous method and removed ExampleCommands.java" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="masterDetails">
     <states>
