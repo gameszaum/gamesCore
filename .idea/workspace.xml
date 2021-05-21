@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="897209db-b5ec-48b0-8c97-51d73a3109dd" name="Default" comment="updated some stuffs and added lettuce-core dependency.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/CommandCreator.java" afterDir="false" />
+    <list default="true" id="897209db-b5ec-48b0-8c97-51d73a3109dd" name="Default" comment="changed project structure organisation.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/redis/Redis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/redis/impl/RedisImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/other/database/redis/packet/RedisPacket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/games-core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/games-core.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/builder/CommandBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/command/builder/impl/CommandBuilderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/location/Cuboid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameszaum/core/spigot/api/location/Cuboid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
@@ -26,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Interface" />
         <option value="package-info" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -242,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614915517992</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="changed project structure organisation.">
+      <created>1615903160072</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1615903160072</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -270,7 +275,8 @@
     <MESSAGE value="updated mysql-connector dependency" />
     <MESSAGE value="updated some stuffs and added lettuce-core dependency." />
     <MESSAGE value="updated USE.md, README.md, refactored Command asynchronous method and removed ExampleCommands.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated USE.md, README.md, refactored Command asynchronous method and removed ExampleCommands.java" />
+    <MESSAGE value="changed project structure organisation." />
+    <option name="LAST_COMMIT_MESSAGE" value="changed project structure organisation." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

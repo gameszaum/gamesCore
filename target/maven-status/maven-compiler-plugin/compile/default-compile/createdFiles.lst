@@ -33,12 +33,14 @@ com\gameszaum\core\spigot\menu\helper\MenuHelper.class
 com\gameszaum\core\bungee\command\base\BungeeCommandBase$1.class
 com\gameszaum\core\other\services\Model.class
 com\gameszaum\core\spigot\api\server\PingServer.class
+com\gameszaum\core\other\database\redis\Redis.class
 com\gameszaum\core\spigot\event\EventBuilder.class
 com\gameszaum\core\spigot\scoreboard\helper\ScoreHelper.class
 com\gameszaum\core\spigot\menu\Menu$1.class
 com\gameszaum\core\bungee\command\asserts\BungeeCommandAsserts.class
 com\gameszaum\core\bungee\command\helper\impl\BungeeCommandHelperImpl.class
 com\gameszaum\core\spigot\Services.class
+com\gameszaum\core\other\database\redis\packet\RedisPacket.class
 com\gameszaum\core\spigot\command\CommandCreator.class
 com\gameszaum\core\bungee\plugin\GamesBungee.class
 com\gameszaum\core\spigot\api\configuration\ConfigAPI.class
@@ -48,3 +50,4 @@ com\gameszaum\core\spigot\scoreboard\ScoreBuilder.class
 com\gameszaum\core\bungee\Bungee.class
 com\gameszaum\core\spigot\permission\PermissionService.class
 com\gameszaum\core\spigot\scoreboard\exception\ScoreLimiteException.class
+com\gameszaum\core\other\database\redis\impl\RedisImpl.class
