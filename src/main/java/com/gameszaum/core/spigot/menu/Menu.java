@@ -58,10 +58,10 @@ public class Menu implements MenuHelper {
                         if (slot <= (rows * 9) - 1) {
                             event.setCancelled(true);
                             if (hasAction(slot)) {
-                                commands.get(slot).run(inv, item, slot, a);
+                                commands.get(slot).run(inv, item, slot, a, event.getClick());
                             }
                             if (gaction != null) {
-                                gaction.run(inv, item, slot, a);
+                                gaction.run(inv, item, slot, a, event.getClick());
                             }
                         }
                     }

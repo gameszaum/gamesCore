@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 public class ScoreDataImpl implements ScoreData {
 
-    private Set<ScoreHelper> scoreHelperSet;
+    private final Set<ScoreHelper> scoreHelperSet;
 
     public ScoreDataImpl() {
         scoreHelperSet = new HashSet<>();

@@ -7,7 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class ListenerLoader {
 
-    private JavaPlugin plugin;
+    private final JavaPlugin plugin;
 
     public ListenerLoader(JavaPlugin plugin) {
         this.plugin = plugin;

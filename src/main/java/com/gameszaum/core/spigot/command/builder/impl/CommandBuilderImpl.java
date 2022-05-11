@@ -1,5 +1,6 @@
 package com.gameszaum.core.spigot.command.builder.impl;
 
+import com.gameszaum.core.spigot.command.builder.CommandBuilder;
 import com.gameszaum.core.spigot.command.helper.CommandHelperImpl;
 import com.gameszaum.core.spigot.plugin.GamesPlugin;
 import org.bukkit.command.Command;
@@ -13,10 +14,8 @@ import java.util.concurrent.ThreadPoolExecutor;
 public abstract class CommandBuilderImpl implements CommandExecutor, com.gameszaum.core.spigot.command.builder.CommandBuilder {
 
     private boolean async, onlyPlayer;
-    private String perm;
-    private String[] alias;
+    private String permission;
     private ThreadPoolExecutor executor;
-    private GamesPlugin plugin;
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
@@ -24,7 +23,7 @@ public abstract class CommandBuilderImpl implements CommandExecutor, com.gamesza
             commandSender.sendMessage("§cOnly for players.");
             return false;
         }
-        if (perm != null && !(commandSender.hasPermission(perm))) {
+        if (permission != null && !(commandSender.hasPermission(permission))) {
             commandSender.sendMessage("§cYou do not have permission to execute this command.");
             return false;
         }
@@ -34,15 +33,15 @@ public abstract class CommandBuilderImpl implements CommandExecutor, com.gamesza
                 try {
                     handler(commandSender, new CommandHelperImpl(), args);
                 } catch (Exception e) {
-                    commandSender.sendMessage("§cAn error has occurred to execute this command §e/" + alias[0] + "§c.");
+                    commandSender.sendMessage("§cAn error has occurred to execute this command §e/" + command.getName() + "§c.");
                     e.printStackTrace();
                 }
-            }, executor).whenComplete((unused, throwable) -> executor.shutdown());
+            }, executor);
         } else {
             try {
                 handler(commandSender, new CommandHelperImpl(), args);
             } catch (Exception e) {
-                commandSender.sendMessage("§cAn error has occurred to execute this command §e/" + alias[0] + "§c.");
+                commandSender.sendMessage("§cAn error has occurred to execute this command §e/" + command.getName() + "§c.");
                 e.printStackTrace();
             }
         }
@@ -50,15 +49,8 @@ public abstract class CommandBuilderImpl implements CommandExecutor, com.gamesza
     }
 
     @Override
-    public void register(String... alias) {
-        this.alias = alias;
+    public void register(GamesPlugin plugin, String... alias) {
         plugin.registerCommand(this, alias);
-    }
-
-    @Override
-    public com.gameszaum.core.spigot.command.builder.CommandBuilder plugin(GamesPlugin plugin) {
-        this.plugin = plugin;
-        return this;
     }
 
     @Override
@@ -68,8 +60,14 @@ public abstract class CommandBuilderImpl implements CommandExecutor, com.gamesza
     }
 
     @Override
+    public CommandBuilder executor(ThreadPoolExecutor executor) {
+        this.executor = executor;
+        return this;
+    }
+
+    @Override
     public com.gameszaum.core.spigot.command.builder.CommandBuilder permission(String perm) {
-        this.perm = perm;
+        this.permission = perm;
         return this;
     }
 
@@ -77,14 +75,5 @@ public abstract class CommandBuilderImpl implements CommandExecutor, com.gamesza
     public com.gameszaum.core.spigot.command.builder.CommandBuilder player() {
         this.onlyPlayer = true;
         return this;
-    }
-
-    public com.gameszaum.core.spigot.command.builder.CommandBuilder executor(ThreadPoolExecutor executor){
-        this.executor = executor;
-        return this;
-    }
-
-    public GamesPlugin getPlugin() {
-        return plugin;
     }
 }

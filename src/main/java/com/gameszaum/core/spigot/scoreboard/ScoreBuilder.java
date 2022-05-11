@@ -2,7 +2,7 @@ package com.gameszaum.core.spigot.scoreboard;
 
 import com.gameszaum.core.spigot.Services;
 import com.gameszaum.core.spigot.scoreboard.data.ScoreData;
-import com.gameszaum.core.spigot.scoreboard.exception.ScoreLimiteException;
+import com.gameszaum.core.spigot.scoreboard.exception.ScoreLimitLineException;
 import com.gameszaum.core.spigot.scoreboard.helper.ScoreHelper;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -16,35 +16,29 @@ import java.util.List;
 
 public class ScoreBuilder implements ScoreHelper {
 
-    private Scoreboard scoreboard;
-    private ScoreData scoreData;
-    private Objective sidebar;
-    private Player player;
+    private final Player player;
+    private final Scoreboard scoreboard;
+    private final Objective sidebar;
 
     public ScoreBuilder(Player player) {
         this.player = player;
-        this.scoreData = Services.get(ScoreData.class);
+
+        ScoreData scoreData = Services.get(ScoreData.class);
 
         scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
         sidebar = scoreboard.registerNewObjective("sidebar", "dummy");
         sidebar.setDisplaySlot(DisplaySlot.SIDEBAR);
 
-        // Create Teams
-
         for (int i = 1; i <= 15; i++) {
             Team team = scoreboard.registerNewTeam("SLOT_" + i);
             team.addEntry(getEntry(i));
         }
-
-        // Setting scoreboard.
-
-        player.setScoreboard(scoreboard);
-        scoreData.create(this);
-    }
-
-    @Override
-    public Player getPlayer() {
-        return player;
+        if (scoreData != null) {
+            player.setScoreboard(scoreboard);
+            scoreData.create(this);
+        } else {
+            Bukkit.getConsoleSender().sendMessage("§cScoreData has not been defined by developer.");
+        }
     }
 
     @Override
@@ -69,7 +63,7 @@ public class ScoreBuilder implements ScoreHelper {
             team.setPrefix(pre);
             team.setSuffix(suf);
         } else {
-            new ScoreLimiteException().printStackTrace();
+            new ScoreLimitLineException().printStackTrace();
         }
     }
 
@@ -122,5 +116,10 @@ public class ScoreBuilder implements ScoreHelper {
             s = s.substring(0, 32);
         }
         return s.length() > 16 ? s.substring(16) : "";
+    }
+
+    @Override
+    public Player getPlayer() {
+        return player;
     }
 }

@@ -1,8 +1,8 @@
 package com.gameszaum.core.spigot.scoreboard.exception;
 
-public class ScoreLimiteException extends Exception {
+public class ScoreLimitLineException extends Exception {
 
-    public ScoreLimiteException() {
+    public ScoreLimitLineException() {
         super("This line has reached the character limit. (32 characters)");
     }
 

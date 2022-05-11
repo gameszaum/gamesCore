@@ -6,8 +6,6 @@ import java.util.List;
 
 public interface ScoreHelper {
 
-    Player getPlayer();
-
     void setTitle(String title);
 
     void setSlot(int slot, String text);
@@ -23,5 +21,7 @@ public interface ScoreHelper {
     String getFirstSplit(String s);
 
     String getSecondSplit(String s);
+
+    Player getPlayer();
 
 }

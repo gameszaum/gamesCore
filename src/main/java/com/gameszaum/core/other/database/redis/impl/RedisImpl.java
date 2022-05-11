@@ -42,9 +42,11 @@ public class RedisImpl implements Redis {
 
     @Override
     public void sendPacket(RedisPacket packet, String channel) {
-        RedisPubSubAsyncCommands<String, String> async = mainConnection.async();
+        StatefulRedisPubSubConnection<String, String> connection = client.connectPubSub();
+        RedisPubSubAsyncCommands<String, String> async = connection.async();
 
         async.publish(channel, writePacket(packet));
+        connection.closeAsync();
     }
 
     @Override
