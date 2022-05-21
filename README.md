@@ -24,4 +24,6 @@ Read [USE](https://github.com/gameszaum/gamesCore/blob/master/USE.md) file to kn
 
 ## Donate
 
-Do you want to help the library maintance? Contact-me in my discord server, [discord server](http://discord.gameszaum.com).
+Do you want to help the library maintance?
+ 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BWRA9XG6K7L4Y)
